@@ -1,0 +1,20 @@
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Parallel Suite"
+       parallel="tests"
+       thread-count="2">
+
+    <test name="Test1">
+        <classes>
+            <class name="Test.AmazonTest"/>
+        </classes>
+    </test>
+
+    <test name="Test2">
+        <classes>
+            <class name="Test.AmazonTest2"/>
+        </classes>
+    </test>
+
+</suite>
