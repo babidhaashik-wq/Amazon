@@ -1,98 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="1" failed="4" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2026-06-22T15:08:10 IST" name="ParallelSuite" finished-at="2026-06-22T15:11:24 IST" duration-ms="193385">
-    <groups>
-      <group name="regression">
-        <method signature="Destinations.getSite()[pri:1, instance:Test.Destinations@7b2bbc3]" name="getSite" class="Test.Destinations"/>
-        <method signature="Login.getSite()[pri:1, instance:Test.Login@128d2484]" name="getSite" class="Test.Login"/>
-        <method signature="Login.support()[pri:3, instance:Test.Login@128d2484]" name="support" class="Test.Login"/>
-      </group> <!-- regression -->
-      <group name="smoke">
-        <method signature="Destinations.getSite()[pri:1, instance:Test.Destinations@7b2bbc3]" name="getSite" class="Test.Destinations"/>
-        <method signature="Login.login()[pri:2, instance:Test.Login@128d2484]" name="login" class="Test.Login"/>
-        <method signature="Login.moreOffers()[pri:4, instance:Test.Login@128d2484]" name="moreOffers" class="Test.Login"/>
-      </group> <!-- smoke -->
-    </groups>
-    <test started-at="2026-06-22T15:08:10 IST" name="ParallelTests" finished-at="2026-06-22T15:11:24 IST" duration-ms="193385">
-      <class name="Test.Destinations">
-        <test-method signature="getSite()[pri:1, instance:Test.Destinations@7b2bbc3]" started-at="2026-06-22T15:08:11 IST" name="getSite" finished-at="2026-06-22T15:11:24 IST" duration-ms="193305" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[java.util.concurrent.TimeoutException
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6376af5f822d20842ef14c687779dd95, get {url=https://www.cleartrip.com/hotels/results?city=Goa&state=Goa&country=IN&dest_code=37264&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=24/06/2026&chk_out=25/06/2026}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\ASHIK\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49938}, goog:processID: 42964, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49938/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6376af5f822d20842ef14c687779dd95]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6376af5f822d20842ef14c687779dd95, get {url=https://www.cleartrip.com/hotels/results?city=Goa&state=Goa&country=IN&dest_code=37264&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=24/06/2026&chk_out=25/06/2026}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\ASHIK\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49938}, goog:processID: 42964, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49938/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6376af5f822d20842ef14c687779dd95
-at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:427)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:312)
-at Pages.ObjectFile.goaURL(ObjectFile.java:295)
-at Test.Destinations.getSite(Destinations.java:18)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.util.concurrent.TimeoutException
-at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2920)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-... 3 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getSite -->
-      </class> <!-- Test.Destinations -->
-      <class name="Test.Login">
-        <test-method signature="getSite()[pri:1, instance:Test.Login@128d2484]" started-at="2026-06-22T15:08:11 IST" name="getSite" finished-at="2026-06-22T15:08:34 IST" duration-ms="23326" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getSite -->
-        <test-method signature="login()[pri:2, instance:Test.Login@128d2484]" started-at="2026-06-22T15:08:34 IST" name="login" finished-at="2026-06-22T15:10:02 IST" duration-ms="87960" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()=' All Offers']"}
+<!-- Generated by org.testng.reporters.JUnitReportReporter -->
+<testsuite hostname="DESKTOP-FTDUPQR" failures="0" tests="4" name="Test.Login" time="114.976" errors="3" timestamp="2026-06-22T15:11:24 IST" skipped="0">
+  <testcase classname="Test.Login" name="getSite" time="23.326"/>
+  <testcase classname="Test.Login" name="login" time="87.960">
+    <error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&#039; All Offers&#039;]&quot;}
   (Session info: chrome=149.0.7827.103)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
+Build info: version: &#039;4.34.0&#039;, revision: &#039;707dcb4246*&#039;
+System info: os.name: &#039;Windows 11&#039;, os.arch: &#039;amd64&#039;, os.version: &#039;10.0&#039;, java.version: &#039;21.0.11&#039;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3b830e8f0441e726de48ded398af5294, findElement {value=//span[text()=' All Offers'], using=xpath}]
+Command: [3b830e8f0441e726de48ded398af5294, findElement {value=//span[text()=&#039; All Offers&#039;], using=xpath}]
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\ASHIK\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65155}, goog:processID: 24220, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65155/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3b830e8f0441e726de48ded398af5294]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()=' All Offers']"}
+Session ID: 3b830e8f0441e726de48ded398af5294" type="org.openqa.selenium.NoSuchElementException">
+      <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()=' All Offers']"}
   (Session info: chrome=149.0.7827.103)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.34.0', revision: '707dcb4246*'
@@ -134,25 +54,18 @@ at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecuto
 at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 at java.base/java.lang.Thread.run(Thread.java:1583)
 ]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="support()[pri:3, instance:Test.Login@128d2484]" started-at="2026-06-22T15:10:02 IST" name="support" finished-at="2026-06-22T15:10:04 IST" duration-ms="1740" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[unknown error: net::ERR_INTERNET_DISCONNECTED
+    </error>
+  </testcase> <!-- login -->
+  <testcase classname="Test.Login" name="support" time="1.740">
+    <error message="unknown error: net::ERR_INTERNET_DISCONNECTED
   (Session info: chrome=149.0.7827.103)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
+Build info: version: &#039;4.34.0&#039;, revision: &#039;707dcb4246*&#039;
+System info: os.name: &#039;Windows 11&#039;, os.arch: &#039;amd64&#039;, os.version: &#039;10.0&#039;, java.version: &#039;21.0.11&#039;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Command: [aed9133faa0b798a07f950f13826cdaa, get {url=https://www.cleartrip.com/}]
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\ASHIK\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55201}, goog:processID: 15028, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55201/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: aed9133faa0b798a07f950f13826cdaa]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_INTERNET_DISCONNECTED
+Session ID: aed9133faa0b798a07f950f13826cdaa" type="org.openqa.selenium.WebDriverException">
+      <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_INTERNET_DISCONNECTED
   (Session info: chrome=149.0.7827.103)
 Build info: version: '4.34.0', revision: '707dcb4246*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
@@ -189,25 +102,18 @@ at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecuto
 at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 at java.base/java.lang.Thread.run(Thread.java:1583)
 ]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- support -->
-        <test-method signature="moreOffers()[pri:4, instance:Test.Login@128d2484]" started-at="2026-06-22T15:10:04 IST" name="moreOffers" finished-at="2026-06-22T15:10:06 IST" duration-ms="1950" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[unknown error: net::ERR_INTERNET_DISCONNECTED
+    </error>
+  </testcase> <!-- support -->
+  <testcase classname="Test.Login" name="moreOffers" time="1.950">
+    <error message="unknown error: net::ERR_INTERNET_DISCONNECTED
   (Session info: chrome=149.0.7827.103)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
+Build info: version: &#039;4.34.0&#039;, revision: &#039;707dcb4246*&#039;
+System info: os.name: &#039;Windows 11&#039;, os.arch: &#039;amd64&#039;, os.version: &#039;10.0&#039;, java.version: &#039;21.0.11&#039;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Command: [f86f6b15384be729b19be5e02fde689c, get {url=https://www.cleartrip.com/}]
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\ASHIK\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57568}, goog:processID: 6528, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57568/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f86f6b15384be729b19be5e02fde689c]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_INTERNET_DISCONNECTED
+Session ID: f86f6b15384be729b19be5e02fde689c" type="org.openqa.selenium.WebDriverException">
+      <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_INTERNET_DISCONNECTED
   (Session info: chrome=149.0.7827.103)
 Build info: version: '4.34.0', revision: '707dcb4246*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
@@ -244,12 +150,6 @@ at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecuto
 at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 at java.base/java.lang.Thread.run(Thread.java:1583)
 ]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- moreOffers -->
-      </class> <!-- Test.Login -->
-    </test> <!-- ParallelTests -->
-  </suite> <!-- ParallelSuite -->
-</testng-results>
+    </error>
+  </testcase> <!-- moreOffers -->
+</testsuite> <!-- Test.Login -->
