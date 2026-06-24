@@ -9,11 +9,34 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Smoke Suite</th></tr>
-<tr><td><a href="#t0">Smoke Tests</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">81,620</td><td>smoke</td><td></td></tr>
+<tr><td><a href="#t0">Smoke Tests</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">160,378</td><td>smoke</td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Smoke Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Smoke Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Test.Destinations</td><td><a href="#m0">getSite</a></td><td rowspan="1">1782303812576</td><td rowspan="1">21452</td></tr><tr class="passedodd"><td rowspan="2">Test.Login</td><td><a href="#m1">login</a></td><td rowspan="1">1782303752492</td><td rowspan="1">31816</td></tr><tr class="passedodd"><td><a href="#m2">moreOffers</a></td><td rowspan="1">1782303784624</td><td rowspan="1">27930</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Smoke Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Smoke Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Test.Destinations</td><td><a href="#m0">getSite</a></td><td rowspan="1">1782303989262</td><td rowspan="1">47376</td></tr><tr><th colspan="4">Smoke Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">Test.Login</td><td><a href="#m1">login</a></td><td rowspan="1">1782303876330</td><td rowspan="1">45068</td></tr><tr class="passedeven"><td><a href="#m2">moreOffers</a></td><td rowspan="1">1782303921863</td><td rowspan="1">67299</td></tr></tbody>
 </table>
-<h2>Smoke Tests</h2><h3 id="m0">Test.Destinations#getSite</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Smoke Tests</h2><h3 id="m0">Test.Destinations#getSite</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[text()=&apos;ITC Grand Goa, a Luxury Collection Resort &amp; Spa, Goa&apos;]&quot;}
+  (Session info: chrome=149.0.7827.103)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ebbad833fc5ea9e89cc324dc919a316c, findElement {using=xpath, value=//div[text()=&apos;ITC Grand Goa, a Luxury Collection Resort &amp; Spa, Goa&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\ASHIK\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56860}, goog:processID: 42760, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56860/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ebbad833fc5ea9e89cc324dc919a316c
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at Pages.ObjectFile.searchHotelsITC(ObjectFile.java:314)
+	at Test.Destinations.getSite(Destinations.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">Test.Login#login</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">Test.Login#moreOffers</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
