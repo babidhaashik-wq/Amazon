@@ -12,7 +12,7 @@ public class Destinations {
 		WebDriver driver = new ChromeDriver();
 		driver.get(BaseURL.URL);
 		ObjectFile page = new ObjectFile(driver);
-		page.initialization();
+		//page.initialization();
 		page.closeButton();
 		page.goa();
 		page.goaURL();
